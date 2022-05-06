@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&family=Roboto:wght@200;300;400;500;600;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
+  <script type="module"
+    src="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"></script>
+  <title>Vite App</title>
+</head>
+
+<body class="">
+  <rux-global-status-bar app-domain="Astro" app-name="Sample App" app-state="App State" username="username" include-icon
+    menu-icon="apps">
+
+    <rux-clock></rux-clock>
+    <div slot="right-side" class="flex items-center">
+      <rux-monitoring-icon class="" icon="altitude" label="Monitoring" status="normal" notifications="1" sublabel="">
+      </rux-monitoring-icon>
+      <rux-monitoring-icon icon="altitude" label="Monitoring" status="normal" notifications="1" sublabel="">
+      </rux-monitoring-icon>
+
+    </div>
+  </rux-global-status-bar>
+  <main class="p-6 flex">
+    <div class="w-1/3 bg-surface-header">
+      <div class="p-4 border-inverse border-1 flex items-center">
+        <div class="font-heading-2">Left panel</div>
+        <div class="flex items-center ml-auto">
+          <rux-input class="mr-6" type="search"></rux-input>
+          <rux-button secondary icon-only icon="add"></rux-button>
+        </div>
+      </div>
+      <div class="p-4 flex items-center">
+        <div class="text-center">
+          <div class="font-heading-1">25</div>
+          <div class="font-body-1">Active items</div>
+        </div>
+        <div class="ml-auto flex items-center">
+          <rux-select label="Sort by" class="mr-4">
+            <rux-option label="Last updated" value="lastUpdated"></rux-option>
+          </rux-select>
+          <rux-select label="Item type">
+            <rux-option label="all" value="all"></rux-option>
+          </rux-select>
+        </div>
+
+      </div>
+      <div>
+        <ul class="bg-surface-default">
+          <li class="flex items-center p-4">
+            <rux-status status="normal" class="mr-4"></rux-status>
+            <div>
+              <div class="font-heading-3">List Item</div>
+              <div class="font-heading-6">Sub text</div>
+            </div>
+            <div class="font-heading-1 ml-auto">93%</div>
+          </li>
+          <li class="flex items-center p-4">
+            <rux-status status="normal" class="mr-4"></rux-status>
+            <div>
+              <div class="font-heading-3">List Item</div>
+              <div class="font-heading-6">Sub text</div>
+            </div>
+            <div class="font-heading-1 ml-auto">93%</div>
+          </li>
+          <li class="flex items-center p-4">
+            <rux-status status="normal" class="mr-4"></rux-status>
+            <div>
+              <div class="font-heading-3">List Item</div>
+              <div class="font-heading-6">Sub text</div>
+            </div>
+            <div class="font-heading-1 ml-auto">93%</div>
+          </li>
+          <li class="flex items-center p-4">
+            <rux-status status="normal" class="mr-4"></rux-status>
+            <div>
+              <div class="font-heading-3">List Item</div>
+              <div class="font-heading-6">Sub text</div>
+            </div>
+            <div class="font-heading-1 ml-auto">93%</div>
+          </li>
+        </ul>
+      </div>
+      <footer class="p-4">
+        <rux-button-group h-align="right">
+          <rux-button secondary>Dismiss</rux-button>
+          <rux-button>Acknowledge</rux-button>
+        </rux-button-group>
+      </footer>
+
+    </div>
+    <div class="w-2/3 px-6">
+      <div class="flex flex-col">
+        <rux-tabs small id="tab-set-id-1">
+          <rux-tab id="tab-id-1">Tab 1 title</rux-tab>
+          <rux-tab id="tab-id-2">Tab 2 title</rux-tab>
+          <rux-tab id="tab-id-3">Tab 3 title</rux-tab>
+        </rux-tabs>
+
+        <!-- <rux-tab-panels aria-labelledby="tab-set-id-1">
+          <rux-tab-panel aria-labelledby="tab-id-1">Tab 1 HTML content</rux-tab-panel>
+          <rux-tab-panel aria-labelledby="tab-id-2">Tab 2 HTML content</rux-tab-panel>
+          <rux-tab-panel aria-labelledby="tab-id-3">Tab 3 HTML content</rux-tab-panel>
+        </rux-tab-panels> -->
+        <div class="mt-6 flex items-center">
+          <div>
+            <rux-button secondary class="mr-2">First button</rux-button>
+            <rux-button secondary>Button two</rux-button>
+          </div>
+
+          <div class="ml-auto">
+            <rux-button secondary class="mr-2">First button</rux-button>
+            <rux-button secondary>Button two</rux-button>
+            <rux-button secondary>Button two</rux-button>
+          </div>
+        </div>
+
+
+        <div class="flex">
+          <div class="w-2/3 mr-4">
+
+            <!-- Center Panel -->
+            <div class="mt-6 bg-surface-header">
+              <div class="p-4 border-inverse border-1 flex items-center">
+                <div class="font-heading-2">Center top panel</div>
+                <div class="flex items-center ml-auto">
+                  <div class="flex items-center mr-4">
+                    <span style="width: 100px;" class="mr-2">Show values</span>
+                    <rux-switch></rux-switch>
+                  </div>
+                  <rux-segmented-button id="center-panel-control"></rux-segmented-button>
+                </div>
+              </div>
+              <div class="bg-surface-default pb-4">
+                <svg class="m-auto w-3/4" width="899" height="204" viewBox="0 0 899 204" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="410.851" cy="121.534" r="56" transform="rotate(-180 410.851 121.534)" stroke="#6058A8"
+                    stroke-width="28" />
+                  <circle cx="410.851" cy="121.534" r="69.5" transform="rotate(-180 410.851 121.534)" fill="#6058A8"
+                    stroke="#6058A8" />
+                  <mask id="mask0_2472_12102" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="340" y="51"
+                    width="141" height="141">
+                    <circle cx="410.852" cy="121.532" r="56" transform="rotate(-180 410.852 121.532)" fill="#5089C7"
+                      stroke="#5089C7" stroke-width="28" />
+                  </mask>
+                  <g mask="url(#mask0_2472_12102)">
+                    <path d="M459.353 206.535L410.422 121.785L508.283 121.785L459.353 206.535Z" fill="#AEA8E5" />
+                  </g>
+                  <mask id="mask1_2472_12102" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="409" y="23"
+                    width="101" height="100">
+                    <path d="M409.677 122.004L429.778 23.942L509.778 121.855L409.677 122.004Z" fill="#C4C4C4" />
+                  </mask>
+                  <g mask="url(#mask1_2472_12102)">
+                    <circle cx="410.851" cy="121.534" r="56" transform="rotate(-180 410.851 121.534)" fill="#302C54"
+                      stroke="#302C54" stroke-width="28" />
+                  </g>
+                  <circle cx="411" cy="121.001" r="70.5" stroke="#18152B" />
+                  <circle cx="240" cy="92.0007" r="69.5" fill="#302C54" stroke="#18152B" />
+                  <line opacity="0.4" x1="180" y1="57.5007" x2="300" y2="57.5007" stroke="white"
+                    stroke-dasharray="2 2" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M170.063 89.0007C170.021 89.9955 170 90.9956 170 92.0007C170 130.661 201.34 162.001 240 162.001C278.66 162.001 310 130.661 310 92.0007C310 90.9956 309.979 89.9955 309.937 89.0007H170.063Z"
+                    fill="#6058A8" />
+                  <circle cx="240" cy="92.0007" r="69.5" stroke="#18152B" />
+                  <path
+                    d="M142.424 116.39C142.424 155.621 110.621 187.424 71.3904 187.424C32.1597 187.424 0.356952 155.621 0.356952 116.39C0.356952 77.1597 32.1597 45.357 71.3904 45.357C110.621 45.357 142.424 77.1597 142.424 116.39Z"
+                    stroke="black" stroke-width="0.713904" />
+                  <circle cx="71.3904" cy="116.39" r="42.4773" stroke="black" stroke-width="0.713904" />
+                  <path
+                    d="M70.681 73.5562L70.681 45.7139C111.782 45.7139 142.067 77.8396 142.067 117.104L114.226 117.104C114.226 91.4037 94.2383 73.5562 70.681 73.5562Z"
+                    fill="#AEA8E5" />
+                  <path
+                    d="M70.681 159.225L70.681 187.067C111.782 187.067 142.067 154.584 142.067 117.104L114.226 117.104C113.513 140.306 94.5953 159.225 70.681 159.225Z"
+                    fill="#938BDB" />
+                  <path
+                    d="M70.681 73.5562L70.681 45.7168C31.4205 45.3563 0.00906737 79.2674 0.72596 117.104L28.5544 117.104C28.5544 91.7607 48.5424 73.9131 70.681 73.5562Z"
+                    fill="#302C54" />
+                  <path
+                    d="M70.681 159.225L70.681 187.067C30.7068 187.067 0.369116 153.87 0.726017 117.104L28.5544 117.104C29.2664 141.02 48.1855 158.868 70.681 159.225Z"
+                    fill="#6058A8" />
+                  <path
+                    d="M220.605 192.587C220.395 194.391 219.727 195.786 218.602 196.77C217.484 197.747 215.996 198.235 214.137 198.235C212.121 198.235 210.504 197.512 209.285 196.067C208.074 194.622 207.469 192.688 207.469 190.266V188.626C207.469 187.04 207.75 185.645 208.312 184.442C208.883 183.239 209.688 182.317 210.727 181.677C211.766 181.028 212.969 180.704 214.336 180.704C216.148 180.704 217.602 181.212 218.695 182.227C219.789 183.235 220.426 184.634 220.605 186.423H218.344C218.148 185.063 217.723 184.079 217.066 183.469C216.418 182.86 215.508 182.555 214.336 182.555C212.898 182.555 211.77 183.087 210.949 184.149C210.137 185.212 209.73 186.723 209.73 188.684V190.337C209.73 192.188 210.117 193.661 210.891 194.755C211.664 195.848 212.746 196.395 214.137 196.395C215.387 196.395 216.344 196.114 217.008 195.552C217.68 194.981 218.125 193.993 218.344 192.587H220.605ZM225.516 186.856C226.477 185.677 227.727 185.087 229.266 185.087C231.945 185.087 233.297 186.598 233.32 189.622V198.001H231.152V189.61C231.145 188.696 230.934 188.02 230.52 187.583C230.113 187.145 229.477 186.927 228.609 186.927C227.906 186.927 227.289 187.114 226.758 187.489C226.227 187.864 225.812 188.356 225.516 188.966V198.001H223.348V180.001H225.516V186.856ZM244.395 198.001C244.27 197.751 244.168 197.305 244.09 196.665C243.082 197.712 241.879 198.235 240.48 198.235C239.23 198.235 238.203 197.884 237.398 197.18C236.602 196.469 236.203 195.571 236.203 194.485C236.203 193.165 236.703 192.141 237.703 191.415C238.711 190.68 240.125 190.313 241.945 190.313H244.055V189.317C244.055 188.559 243.828 187.958 243.375 187.512C242.922 187.059 242.254 186.833 241.371 186.833C240.598 186.833 239.949 187.028 239.426 187.419C238.902 187.809 238.641 188.282 238.641 188.837H236.461C236.461 188.204 236.684 187.594 237.129 187.009C237.582 186.415 238.191 185.946 238.957 185.602C239.73 185.259 240.578 185.087 241.5 185.087C242.961 185.087 244.105 185.454 244.934 186.188C245.762 186.915 246.191 187.919 246.223 189.2V195.036C246.223 196.2 246.371 197.126 246.668 197.813V198.001H244.395ZM240.797 196.348C241.477 196.348 242.121 196.173 242.73 195.821C243.34 195.469 243.781 195.012 244.055 194.45V191.848H242.355C239.699 191.848 238.371 192.626 238.371 194.18C238.371 194.86 238.598 195.391 239.051 195.774C239.504 196.157 240.086 196.348 240.797 196.348ZM255.75 187.266C255.422 187.212 255.066 187.184 254.684 187.184C253.262 187.184 252.297 187.79 251.789 189.001V198.001H249.621V185.321H251.73L251.766 186.786C252.477 185.653 253.484 185.087 254.789 185.087C255.211 185.087 255.531 185.141 255.75 185.251V187.266ZM261.281 182.251V185.321H263.648V186.997H261.281V194.86C261.281 195.368 261.387 195.751 261.598 196.009C261.809 196.259 262.168 196.384 262.676 196.384C262.926 196.384 263.27 196.337 263.707 196.243V198.001C263.137 198.157 262.582 198.235 262.043 198.235C261.074 198.235 260.344 197.942 259.852 197.356C259.359 196.77 259.113 195.938 259.113 194.86V186.997H256.805V185.321H259.113V182.251H261.281ZM273.574 194.637C273.574 194.052 273.352 193.598 272.906 193.278C272.469 192.95 271.699 192.669 270.598 192.434C269.504 192.2 268.633 191.919 267.984 191.591C267.344 191.262 266.867 190.872 266.555 190.419C266.25 189.966 266.098 189.427 266.098 188.802C266.098 187.762 266.535 186.884 267.41 186.165C268.293 185.446 269.418 185.087 270.785 185.087C272.223 185.087 273.387 185.458 274.277 186.2C275.176 186.942 275.625 187.891 275.625 189.048H273.445C273.445 188.454 273.191 187.942 272.684 187.512C272.184 187.083 271.551 186.868 270.785 186.868C269.996 186.868 269.379 187.04 268.934 187.384C268.488 187.727 268.266 188.177 268.266 188.731C268.266 189.255 268.473 189.649 268.887 189.915C269.301 190.18 270.047 190.434 271.125 190.677C272.211 190.919 273.09 191.208 273.762 191.544C274.434 191.88 274.93 192.286 275.25 192.762C275.578 193.231 275.742 193.805 275.742 194.485C275.742 195.618 275.289 196.528 274.383 197.216C273.477 197.895 272.301 198.235 270.855 198.235C269.84 198.235 268.941 198.055 268.16 197.696C267.379 197.337 266.766 196.837 266.32 196.196C265.883 195.548 265.664 194.848 265.664 194.098H267.832C267.871 194.825 268.16 195.403 268.699 195.833C269.246 196.255 269.965 196.466 270.855 196.466C271.676 196.466 272.332 196.302 272.824 195.973C273.324 195.637 273.574 195.192 273.574 194.637Z"
+                    fill="white" />
+                  <path
+                    d="M704.691 195.762C704.113 196.59 703.305 197.212 702.266 197.626C701.234 198.032 700.031 198.235 698.656 198.235C697.266 198.235 696.031 197.911 694.953 197.262C693.875 196.606 693.039 195.676 692.445 194.473C691.859 193.27 691.559 191.876 691.543 190.29V188.801C691.543 186.231 692.141 184.239 693.336 182.825C694.539 181.411 696.227 180.704 698.398 180.704C700.18 180.704 701.613 181.161 702.699 182.075C703.785 182.981 704.449 184.27 704.691 185.942H702.441C702.02 183.684 700.676 182.555 698.41 182.555C696.902 182.555 695.758 183.087 694.977 184.149C694.203 185.204 693.812 186.735 693.805 188.743V190.137C693.805 192.051 694.242 193.575 695.117 194.708C695.992 195.833 697.176 196.395 698.668 196.395C699.512 196.395 700.25 196.301 700.883 196.114C701.516 195.926 702.039 195.61 702.453 195.165V191.333H698.504V189.505H704.691V195.762ZM714.242 187.266C713.914 187.212 713.559 187.184 713.176 187.184C711.754 187.184 710.789 187.79 710.281 189.001V198.001H708.113V185.321H710.223L710.258 186.786C710.969 185.653 711.977 185.087 713.281 185.087C713.703 185.087 714.023 185.141 714.242 185.251V187.266ZM723.605 198.001C723.48 197.751 723.379 197.305 723.301 196.665C722.293 197.712 721.09 198.235 719.691 198.235C718.441 198.235 717.414 197.883 716.609 197.18C715.812 196.469 715.414 195.571 715.414 194.485C715.414 193.165 715.914 192.141 716.914 191.415C717.922 190.68 719.336 190.313 721.156 190.313H723.266V189.317C723.266 188.559 723.039 187.958 722.586 187.512C722.133 187.059 721.465 186.833 720.582 186.833C719.809 186.833 719.16 187.028 718.637 187.419C718.113 187.809 717.852 188.282 717.852 188.837H715.672C715.672 188.204 715.895 187.594 716.34 187.008C716.793 186.415 717.402 185.946 718.168 185.602C718.941 185.258 719.789 185.087 720.711 185.087C722.172 185.087 723.316 185.454 724.145 186.188C724.973 186.915 725.402 187.919 725.434 189.2V195.036C725.434 196.2 725.582 197.126 725.879 197.813V198.001H723.605ZM720.008 196.348C720.688 196.348 721.332 196.172 721.941 195.821C722.551 195.469 722.992 195.012 723.266 194.45V191.848H721.566C718.91 191.848 717.582 192.626 717.582 194.18C717.582 194.86 717.809 195.391 718.262 195.774C718.715 196.157 719.297 196.348 720.008 196.348ZM739.543 191.801C739.543 193.731 739.102 195.286 738.219 196.465C737.336 197.645 736.141 198.235 734.633 198.235C733.094 198.235 731.883 197.747 731 196.77V202.876H728.832V185.321H730.812L730.918 186.727C731.801 185.633 733.027 185.087 734.598 185.087C736.121 185.087 737.324 185.661 738.207 186.809C739.098 187.958 739.543 189.555 739.543 191.602V191.801ZM737.375 191.555C737.375 190.126 737.07 188.997 736.461 188.169C735.852 187.34 735.016 186.926 733.953 186.926C732.641 186.926 731.656 187.508 731 188.672V194.731C731.648 195.887 732.641 196.465 733.977 196.465C735.016 196.465 735.84 196.055 736.449 195.235C737.066 194.407 737.375 193.18 737.375 191.555ZM744.477 186.856C745.438 185.676 746.688 185.087 748.227 185.087C750.906 185.087 752.258 186.598 752.281 189.622V198.001H750.113V189.61C750.105 188.696 749.895 188.02 749.48 187.583C749.074 187.145 748.438 186.926 747.57 186.926C746.867 186.926 746.25 187.114 745.719 187.489C745.188 187.864 744.773 188.356 744.477 188.965V198.001H742.309V180.001H744.477V186.856Z"
+                    fill="white" />
+                  <rect x="653.5" y="53.5006" width="34" height="99" fill="#938BDB" stroke="#6058A8" />
+                  <rect x="803.5" y="53.5006" width="34" height="99" fill="#938BDB" stroke="#6058A8" />
+                  <rect x="703.5" y="29.5006" width="34" height="123" fill="#938BDB" stroke="#6058A8" />
+                  <rect x="603.5" y="69.5006" width="34" height="83" fill="#6058A8" stroke="#6058A8" />
+                  <rect x="753.5" y="69.5006" width="34" height="83" fill="#6058A8" stroke="#6058A8" />
+                  <rect x="553.5" y="95.5006" width="34" height="57" fill="#302C54" stroke="#6058A8" />
+                  <rect x="544" y="158.001" width="355" height="3" fill="#101923" />
+                  <rect x="853.507" y="95.5006" width="34" height="57" fill="#302C54" stroke="#6058A8" />
+                </svg>
+              </div>
+
+
+            </div>
+            <!-- End Center Panel -->
+
+            <div>
+              center bottom
+            </div>
+
+          </div>
+          <div class="w-1/3">
+            <!-- Right Panel -->
+            <div class="mt-6 bg-surface-header">
+              <div class="p-4 border-inverse border-1 flex items-center">
+                <div class="font-heading-2">Right panel</div>
+              </div>
+              <div class="bg-surface-default pb-4">
+                <rux-table class="w-full">
+                  <rux-table-header>
+                    <rux-table-header-row>
+                      <rux-table-header-cell>
+                        <rux-status status="normal"></rux-status>
+                      </rux-table-header-cell>
+                      <rux-table-header-cell style="padding:0;">Item</rux-table-header-cell>
+                      <rux-table-header-cell>Header text</rux-table-header-cell>
+                    </rux-table-header-row>
+                  </rux-table-header>
+                  <rux-table-body>
+                    <rux-table-row>
+                      <rux-table-cell class="align-middle">
+                        <rux-status status="normal"></rux-status>
+                      </rux-table-cell>
+                      <rux-table-cell class="align-middle">
+                        1
+                      </rux-table-cell>
+                      <rux-table-cell>
+                        <div class="font-body-1 flex flex-col">
+                          <span>Multi-line</span>
+                          <span>text</span>
+                        </div>
+                      </rux-table-cell>
+                    </rux-table-row>
+                    <rux-table-row>
+                      <rux-table-cell class="align-middle">
+                        <rux-status status="normal"></rux-status>
+                      </rux-table-cell>
+                      <rux-table-cell class="align-middle">
+                        1
+                      </rux-table-cell>
+                      <rux-table-cell>
+                        <div class="font-body-1 flex flex-col">
+                          <span>Multi-line</span>
+                          <span>text</span>
+                        </div>
+                      </rux-table-cell>
+                    </rux-table-row>
+                    <rux-table-row>
+                      <rux-table-cell class="align-middle">
+                        <rux-status status="normal"></rux-status>
+                      </rux-table-cell>
+                      <rux-table-cell class="align-middle">
+                        1
+                      </rux-table-cell>
+                      <rux-table-cell>
+                        <div class="font-body-1 flex flex-col">
+                          <span>Multi-line</span>
+                          <span>text</span>
+                        </div>
+                      </rux-table-cell>
+                    </rux-table-row>
+                    <rux-table-row>
+                      <rux-table-cell class="align-middle">
+                        <rux-status status="normal"></rux-status>
+                      </rux-table-cell>
+                      <rux-table-cell class="align-middle">
+                        1
+                      </rux-table-cell>
+                      <rux-table-cell>
+                        <div class="font-body-1 flex flex-col">
+                          <span>Multi-line</span>
+                          <span>text</span>
+                        </div>
+                      </rux-table-cell>
+                    </rux-table-row>
+                  </rux-table-body>
+                </rux-table>
+              </div>
+            </div>
+            <!-- End Right Panel -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const centerPanelSegmentedButton = document.querySelector('#center-panel-control');
+    centerPanelSegmentedButton.data = [
+      {
+        label: "Table"
+      },
+      {
+        label: "Graph"
+      }
+    ]
+
+  </script>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

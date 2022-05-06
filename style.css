@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-heading-2 {
+	font-family: var(--font-heading-2-font-family);
+    font-size: var(--font-heading-2-font-size);
+    font-weight: var(--font-heading-2-font-weight);
+    letter-spacing: var(--font-heading-2-letter-spacing);
+    line-height: var(--font-heading-2-line-height);
+}
+
+
+.font-heading-1 {
+	font-family: var(--font-heading-1-font-family);
+    font-size: var(--font-heading-1-font-size);
+    font-weight: var(--font-heading-1-font-weight);
+    letter-spacing: var(--font-heading-1-letter-spacing);
+    line-height: var(--font-heading-1-line-height);
+}
+
+
+.font-heading-3 {
+	font-family: var(--font-heading-3-font-family);
+    font-size: var(--font-heading-3-font-size);
+    font-weight: var(--font-heading-3-font-weight);
+    letter-spacing: var(--font-heading-3-letter-spacing);
+    line-height: var(--font-heading-3-line-height);
+}
+
+.font-heading-6 {
+	font-family: var(--font-heading-6-font-family);
+    font-size: var(--font-heading-6-font-size);
+    font-weight: var(--font-heading-6-font-weight);
+    letter-spacing: var(--font-heading-6-letter-spacing);
+    line-height: var(--font-heading-6-line-height);
+}
+
+
+
+
+.font-body-1 {
+	font-family: var(--font-body-1-font-family);
+    font-size: var(--font-body-1-font-size);
+    font-weight: var(--font-body-1-font-weight);
+    letter-spacing: var(--font-body-1-letter-spacing);
+    line-height: var(--font-body-1-line-height);
+}
